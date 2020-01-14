@@ -1,0 +1,8 @@
+<br><br>
+<div class="favorites" *ngFor="let fav of favoritesLocation" (click)="showFavoriteLocationOnMain(fav)">
+    <p>
+        <span class="CityName"> {{keyList}}</span> <br/>
+        <span class="CurrentWeather"> {{fav[0].Temperature.Metric.Value}} {{fav[0].Temperature.Metric.Unit}}</span><br/>
+        <span class="CurrentWeatherCondition"> {{fav[0].WeatherText}}</span><br/>
+    </p>
+</div>

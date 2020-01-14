@@ -1,0 +1,32 @@
+section{
+    height: 100%;
+    display: grid;
+    background-color: beige;  
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+    background-image: url("https://image.shutterstock.com/image-vector/blue-white-light-polygonal-mosaic-260nw-230257930.jpg");
+    background-size: cover;
+
+}
+
+
+section>*{
+    /* border: solid black 1px; */
+    border: none;
+
+}
+
+header{
+    grid-column: span 1;
+    text-align: center;
+}
+/* header>span{
+    text-align:right;
+} */
+
+main{
+    overflow: auto;
+    height: 100%;
+    grid-column: span 1;
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+.fiveDaysForecasts{
+  display: table;
+  width: 100%;
+}
+.containerB{
+  height:  100%;
+}
+.containerA{
+  height:  100%;
+  display: block;
+}
+
+h1{
+  font-size: 26pt;
+  color: darkblue ;
+  /* text-underline-position: below; */
+  margin: 4px 2px;
+  padding: 3px;
+}
+
+.currentWeather{
+  font-size: 22pt;
+  color: crimson;
+  margin: 4px 2px;
+  padding: 3px;
+}
+
+.ForeCasts {
+  
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 15%;
+    height: 75px;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the card */
+    max-width: 600px;
+    display: table-cell;
+  }
+  
+  .telAviv{
+    display: table;
+    width: 100%;
+  }
+  
+  .telAvivForeCasts{
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 15%;
+    height: 75px;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the card */
+    max-width: 600px;
+    display: table-cell;
+  }
+  .container1{
+    text-align: center;
+  }
+  
+  .container {
+    padding: 2px 16px;
+    background-color: darkcyan;
+    border-radius: 15px;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+
+  .addToFavorites , .removeFromFavorites{
+    background-color: purple;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+
+}

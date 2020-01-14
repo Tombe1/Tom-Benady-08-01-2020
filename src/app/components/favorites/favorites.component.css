@@ -1,0 +1,12 @@
+div {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 50%;
+    border-radius: 15px; /* Rounded border */
+    margin: 10px; /* Center the card */
+    max-width: 600px;
+    display: inline-block;
+    background-color: skyblue;
+    overflow: auto;
+    text-align: center;
+    
+  }

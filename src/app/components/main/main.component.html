@@ -1,0 +1,66 @@
+<div class="container1">
+  <h2 class="city">Pick City:</h2>
+  <input type="text" ngModel pattern="[a-zA-Z ]*" #input1 placeholder="tel aviv" [(ngModel)]="q"
+    (keyup)="searchAutoComplete(input1.value)">
+  <br>
+</div>
+
+<div class="containerA" *ngIf="input1.value == 0">
+  <h1>Tel Aviv</h1>
+  <div class="telAviv">
+    <div class="telAvivForeCasts" *ngFor="let d of dailyForecasts">
+      <div class="telAvivContainer1">
+        <h3>{{d.Date | date:"MMMM d, y"}}</h3>
+      </div>
+      <div class="telAvivContainer2" style="background-color:skyblue">
+        <h2><b>{{d.Date | date:"EEE"}}</b></h2>
+        <h3>
+          <p>Daily Tempereture: {{d.Temperature.Minimum.Value}}F and its {{d.Day.IconPhrase}}<br />
+            Nighty Tempereture: {{d.Temperature.Maximum.Value}}F and its {{d.Night.IconPhrase}} <br />
+            <br /> </p>
+        </h3>
+      </div>
+      <div class="container">
+        <p>Source: <span class="promo">{{d.Sources}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="currentWeatherAndFiveDaysForeCasts">
+  <div class="containerB">
+    <div class="locationForecasts" *ngIf="input1.value != 0">
+      <div class="current" *ngFor="let c of currentWeather">
+        <h1>{{q | titlecase }}</h1>
+        <h1>Current Weather Condition: {{c.WeatherText}}</h1>
+        <p> <span class="currentWeather">Current Temperature: {{c.Temperature.Metric.Value}}
+            {{c.Temperature.Metric.Unit}}°</span></p>
+      </div>
+      <div class="fiveDaysForecasts">
+        <div class="ForeCasts" *ngFor="let d of dailyForecasts">
+          <div class="dateContainer">
+            <h3>{{d.Date | date:"MMMM d, y"}}</h3>
+          </div>
+          <div class="tempContainer2" style="background-color:skyblue">
+            <h2><b>{{d.Date | date:"EEE"}}</b></h2>
+            <h3>
+              <p>Daily Tempereture: {{d.Temperature.Minimum.Value}}F and its {{d.Day.IconPhrase}}<br />
+                Nighty Tempereture: {{d.Temperature.Maximum.Value}}F and its {{d.Night.IconPhrase}} <br />
+                <br /> </p>
+            </h3>
+          </div>
+          <div class="container">
+            <p>Source: <span class="promo">{{d.Sources}}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br /><br />
+      <button class="addToFavorites" *ngIf="input1.value != 0" (click)="addFavoriteLocation()">Add to
+        Favorites</button>
+      <button class="removeFromFavorites" *ngIf="input1.value != 0" (click)="removeFromFavorites()">Remove from
+        Favorites</button>
+    </div>
+  </div>
+</div>
